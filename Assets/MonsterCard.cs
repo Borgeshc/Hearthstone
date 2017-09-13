@@ -149,10 +149,7 @@ public class MonsterCard : MonoBehaviour
     void UpdateValueColors()
     {
         if (health >= baseHealth && health != originalBaseHealth)
-        {
             healthText.color = Color.green;
-            originalBaseHealth = baseHealth;
-        }
         else if (health < baseHealth)
             healthText.color = Color.red;
         else if (health == baseHealth)
