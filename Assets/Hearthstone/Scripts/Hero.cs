@@ -52,6 +52,7 @@ public class Hero : MonoBehaviour
             maxManaText = GameObject.Find("PlayerTwoMaxMana").GetComponent<Text>();
         }
     }
+
     #region Health
     public void GainHealth(int healthGained)
     {
@@ -168,12 +169,11 @@ public class Hero : MonoBehaviour
 
     private void UpdateManaCrystals()
     {
-        print(playerOne);
         currentManaText.text = currentMana.ToString();
         maxManaText.text = maxMana.ToString();
     }
     #endregion
-
+    #region Turns
     public void StartTurn()
     {
         myTurn = true;
@@ -185,6 +185,7 @@ public class Hero : MonoBehaviour
     {
         myTurn = false;
     }
+    #endregion
 
     private void Died()
     {
