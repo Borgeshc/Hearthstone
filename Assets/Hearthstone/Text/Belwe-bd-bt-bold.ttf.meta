@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d04cb1fb400be934e928142ec0739da8
+timeCreated: 1505322769
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Belwe Bd BT
+  fontNames:
+  - Belwe Bd BT
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

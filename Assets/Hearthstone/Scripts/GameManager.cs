@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] manaCrystals;
 
+    [Space, Header("Testing Variables")]
+    public MonsterCard monsterCard;
+
+
     Hero playerOneHero;
     Hero playerTwoHero;
 
@@ -49,6 +53,8 @@ public class GameManager : MonoBehaviour
     }
 
     #region TestMethods
+
+#region ManaCrystalTesting
     public void IncreaseMana()
     {
         playerOneHero.IncreaseMana(2);
@@ -73,5 +79,57 @@ public class GameManager : MonoBehaviour
     {
         playerOneHero.StartTurn();
     }
+#endregion
+
+    public void GainHealth(int healthGained)
+    {
+        monsterCard.GainHealth(healthGained);
+    }
+
+    public void LoseHealth(int healthLost)
+    {
+        monsterCard.LoseHealth(healthLost);
+    }
+
+    public void SetHealthTo(int setHealthTo)
+    {
+        monsterCard.SetHealth(setHealthTo);
+    }
+
+    public void GainMaxHealth(int maxHealthGained)
+    {
+        monsterCard.GainMaxHealth(maxHealthGained);
+    }
+
+    public void GainAttack(int attackGained)
+    {
+        monsterCard.IncreaseAttack(attackGained);
+    }
+
+    public void LoseAttack(int attackLost)
+    {
+        monsterCard.DecreaseAttack(attackLost);
+    }
+
+    public void SetAttackTo(int setAttackTo)
+    {
+        monsterCard.SetAttack(setAttackTo);
+    }
+
+    public void IncreaseManaCost(int manaIncrease)
+    {
+        monsterCard.IncreaseManaCost(manaIncrease);
+    }
+
+    public void DecreaseManaCost(int manaDecrease)
+    {
+        monsterCard.ReduceManaCost(manaDecrease);
+    }
+
+    public void SetManaTo(int setManaTo)
+    {
+        monsterCard.SetManaCost(setManaTo);
+    }
+
     #endregion
 }
