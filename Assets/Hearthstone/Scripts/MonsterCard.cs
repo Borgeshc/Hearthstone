@@ -7,9 +7,13 @@ public class MonsterCard : MonoBehaviour
     public int baseAttack;
     public int baseMana;
 
-    public Text healthText;
-    public Text attackText;
-    public Text manaText;
+    public Text healthTextInHand;
+    public Text attackTextInHand;
+    public Text manaTextInHand;
+
+    public Text healthTextInPlay;
+    public Text attackTextInPlay;
+    public Text manaTextInPlay;
 
     int originalBaseHealth;
     int health;
@@ -141,25 +145,29 @@ public class MonsterCard : MonoBehaviour
     void UpdateValues()
     {
         UpdateValueColors();
-        healthText.text = health.ToString();
-        attackText.text = attack.ToString();
-        manaText.text = mana.ToString();
+        healthTextInHand.text = health.ToString();
+        attackTextInHand.text = attack.ToString();
+        manaTextInHand.text = mana.ToString();
+
+        healthTextInPlay.text = health.ToString();
+        attackTextInPlay.text = attack.ToString();
+        manaTextInPlay.text = mana.ToString();
     }
 
     void UpdateValueColors()
     {
         if (health >= baseHealth && health != originalBaseHealth)
-            healthText.color = Color.green;
+            healthTextInPlay.color = Color.green;
         else if (health < baseHealth)
-            healthText.color = Color.red;
+            healthTextInPlay.color = Color.red;
         else if (health == baseHealth)
-            healthText.color = Color.white;
+            healthTextInPlay.color = Color.white;
 
         if (attack > baseAttack)
-            attackText.color = Color.green;
+            attackTextInPlay.color = Color.green;
         else if (attack < baseAttack)
-            attackText.color = Color.red;
+            attackTextInPlay.color = Color.red;
         else if (attack == baseAttack)
-            attackText.color = Color.white;
+            attackTextInPlay.color = Color.white;
     }
 }
