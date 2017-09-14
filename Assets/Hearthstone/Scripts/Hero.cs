@@ -157,14 +157,18 @@ public class Hero : MonoBehaviour
             else
                 maxMana = 0;
 
-            UpdateManaCrystals();
+            if (currentMana > maxMana)
+                currentMana = maxMana;
+
+                UpdateManaCrystals();
 
             if (playerOne)
             {
                 if (maxMana > 0)
-                    manaCrystals[maxMana - 1].SetActive(false);
+                    manaCrystals[maxMana].SetActive(false);
             }
         }
+
     }
 
     private void UpdateManaCrystals()

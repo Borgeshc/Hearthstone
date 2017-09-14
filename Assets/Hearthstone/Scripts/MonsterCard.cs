@@ -3,22 +3,22 @@ using UnityEngine.UI;
 
 public class MonsterCard : MonoBehaviour
 {
-    public int baseHealth;
-    public int baseAttack;
     public int baseMana;
+    public int baseAttack;
+    public int baseHealth;
 
-    public Text healthTextInHand;
-    public Text attackTextInHand;
     public Text manaTextInHand;
+    public Text attackTextInHand;
+    public Text healthTextInHand;
 
-    public Text healthTextInPlay;
-    public Text attackTextInPlay;
     public Text manaTextInPlay;
+    public Text attackTextInPlay;
+    public Text healthTextInPlay;
 
+    int mana;
+    int attack;
     int originalBaseHealth;
     int health;
-    int attack;
-    int mana;
 
     MonsterCard target;
 
